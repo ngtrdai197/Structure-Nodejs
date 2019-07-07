@@ -4,7 +4,7 @@ const constants = require('../config/constants');
 
 exports.create = async (req, res) => {
     try {
-        const { body } = req;
+        const { body } = req;        
         const query = { username: body.username };
         const checkUser = await userRepository.findOne(query);
         if (!checkUser) {
