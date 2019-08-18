@@ -1,6 +1,6 @@
 module.exports = constants = {
     PORT: 3000,
-    SECRECT_KEY: 'masterSecrectKey',
+    SECRECT_KEY: 'masterSerectKey',
     ROLES: {
         USER: 'user',
         ADMIN: 'admin'

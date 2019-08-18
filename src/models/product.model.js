@@ -9,6 +9,12 @@ const productShema = new mongoose.Schema({
         type: Number,
         required: true
     }
-});
+}, {
+        timestamps: true,
+        toJSON: {
+            virtuals: true,
+            transform: (obj, ret) => { delete ret._id, delete ret.__v }
+        }
+    });
 
 module.exports = mongoose.model('product', productShema);
